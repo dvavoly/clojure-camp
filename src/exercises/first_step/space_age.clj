@@ -11,6 +11,7 @@
 ;; 10 years on Mars is 78 years on Mercury.
 
 ;; You will need to look up the relevant data on planets yourself.
+
 (def planets
   {:mercury 88
    :venus   225
@@ -21,8 +22,6 @@
    :uranus  30687
    :neptune 60190})
 
-(defn space []
-  (filter #() (range 1 10)))
-
-(defn second []
-  (filter even? (range 1 20)))
+(defn convert-space-age
+  [age source-planet target-planet]
+  (int (* age (/ (planets source-planet) (planets target-planet)))))

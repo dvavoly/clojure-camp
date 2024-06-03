@@ -1,0 +1,1 @@
+Calva exposes an API for use from other VS Code extensions!!!
